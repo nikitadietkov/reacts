@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+}
+
+header {
+    background-color: black;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 2em 5em;
+    color: white;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.usersList {
+    display: grid;
+    grid-template-columns: repeat(2,30vw);
+    grid-auto-flow: dense;
+    grid-gap: 1em;
+    margin-right: 2em;
+    justify-content: center;
+}
+
+@media all and (max-width: 500px) {
+    .usersList {
+        grid-template-columns: 50vw;
+    }
+    .middle {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+    .aside {
+        width: 35vw;
+    }
+}
+
+.cardOfUsers {
+    width: 90%;
+    margin-bottom: 1em;
+    background: linear-gradient(to top, rgb(0, 119, 255), rgb(0, 162, 255), aquamarine);
+    padding: 1em 1em;
+    border-radius: 0.2em;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: space-between;
+}
+.cardOfUsers h3 {
+    font-size: 1.2em;
+}
+.cardOfUsers p {
+        font-size: 1em;
+        margin-bottom: 10px;
+}
+.cardOfUsers b {
+    background-color: aquamarine;
+    padding: 0.2em 0.4em;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.cardOfUsers form {
+    margin-top: 1.5em;
+}
+
+.cardOfUsers form input, textarea {
+    opacity: 0.8;
+}
+
+.empty {
+    padding: 1em 2em;
+    background-color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: .4em;
+    border: 2px solid black;
+    margin-right: 10em;
+}
+
+.fatherRedactIcons {
+    display: flex;
+    flex-direction: column;
+}
+
+.redactIcons {
+    opacity: 0.5;
+    transition: .2s;
+    margin-bottom: .5em;
+    transform: scale(1.2);
+}
+.redactIcons:hover {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+aside {
+    width: 20vw;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+}
+
+form input:not([type="checkbox"]), form textarea, form button {
+    width: 100%;
+    padding: 4px 2%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    border: .2px solid #111;
+    margin: .2em;
+    font-size: 1em;
+}
+form input[type="checkbox"] {
+    margin: .6em;
+}
+form button {
+    opacity: .7;
+    transition: .4s ease;
+}
+form button:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+label {
+    color: #fff;
+}
